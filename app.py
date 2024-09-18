@@ -86,7 +86,7 @@ def check_url_safety():
         return jsonify({'result': 'No URL provided'}), 400  # Handle missing URL
 
     try:
-        api_key = 'AIzaSyB_lsa8oM10TlKWt72E4CrkZYvLWfzOU-Y'  # Use your actual API key
+        api_key = 'api'  # Use your actual API key
         result = features.check_url_safety(api_key, url)  # This function should return a string result
         return jsonify({'result': result})
     except Exception as e:

@@ -1,0 +1,504 @@
+html, body {
+    height: 100%; /* Ensure the HTML and body take up the full viewport height */
+    margin: 0; /* Remove default margins */
+}
+
+body {
+
+
+
+    background-image: url('bg.png'); /* Path to your background image */
+    background-size: cover; /* Ensure the background image covers the entire viewport */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-position: center center; /* Center the image */
+    background-attachment: fixed; /* Fix the background image in place */
+    
+    color: white;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.strip{
+    position : relative;
+    background-color: black;
+    top: -18.5%;
+    height: 50px;
+    width: 100vw;
+        }
+
+
+/* Logo styling */
+.logo-container {
+    position: absolute;
+    top: 20px; /* Adjust the spacing from the top */
+    left: 20px; /* Adjust the spacing from the left */
+    z-index: 1000; /* Ensure the logo appears above other content */
+}
+
+.logo {
+    width: 190px; /* Adjust the size of the logo */
+    height: auto; /* Maintain the aspect ratio */
+}
+
+.a1{
+    position: absolute;
+    right:20%;
+    top : 3.5%;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: black;
+    font-weight: 350;
+    font-size: medium;
+    height: 30px;
+    width: 110px;
+    letter-spacing: 1px;
+    border-radius: 8px;
+    gap: 7px;
+    border: none;
+    cursor: pointer;
+    text-shadow: 2px 2px 4px white;
+    line-height: 30px; /* This ensures the text is vertically centered */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 4px; /* Adjusted padding for consistency */
+}
+
+.a1:hover{
+   border: 3px solid #149cea;
+   z-index: 10;
+   background-color: transparent;
+   box-shadow: 4px 3px 4px #149CEA,
+   -4px -3px 4px #149CEA;
+   text-shadow: none;
+
+}
+
+.a2{
+    position: absolute;
+    right: 11.5%;
+    top : 3.5%;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: black;
+    font-weight: 350;
+    font-size: medium;
+    height: 30px;
+    width: 110px;
+    letter-spacing: 1px;
+    border-radius: 8px;
+    gap: 7px;
+    border: none;
+    cursor: pointer;
+    text-shadow: 2px 2px 4px white;
+    line-height: 30px; /* This ensures the text is vertically centered */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 4px; 
+
+}
+
+.a2:hover{
+    border: 3px solid #149cea;
+    z-index: 10;
+    background-color: transparent;
+    box-shadow: 4px 3px 4px #149CEA,
+    -4px -3px 4px #149CEA;
+    text-shadow: none;
+   
+}
+
+
+.a3{
+    position: absolute;
+    right: 3%;
+    top : 3.5%;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: black;
+    font-weight: 350;
+    font-size: medium;
+    height: 30px;
+    width: 115px;
+    letter-spacing: 1px;
+    border-radius: 8px;
+    gap: 4px;
+    border: none;
+    cursor: pointer;
+    text-shadow: 2px 2px 4px white;
+    line-height: 30px; /* This ensures the text is vertically centered */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 4px; 
+}
+
+.a3:hover{
+    border: 3px solid #149cea;
+    z-index: 10;
+    background-color: transparent;
+    box-shadow: 4px 3px 4px #149CEA,
+    -4px -3px 4px #149CEA;
+    text-shadow: none;
+}
+
+#myDialog{
+    border: none;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: black;
+    /* color: palegoldenrod; */
+}
+
+#myDialog p{
+    color: white;
+    font-family: Arial, sans-serif;
+    letter-spacing: 1px;
+}
+
+#myDialog h2{
+    color: white;
+    font-size: 30px;
+    position: relative;
+    left: 2%;
+    letter-spacing: 1px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+
+    
+}
+
+menu{
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 10px;
+}
+/* dialog::backdrop{
+    background-color: blue;
+} */
+
+#closeDialog{
+    background-color: black;
+    color: white;
+    font-size: large;
+}
+
+.cross{
+    position: absolute;
+    top: 1%;
+    right: 0%;
+    font-size: larger;
+    border: none;
+}
+
+#myDialog1{
+    border: none;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: black;
+}
+#myDialog1 p{
+    color: white;
+    font-family: Arial, sans-serif;
+    letter-spacing: 1px;
+}
+
+#myDialog1 h3{
+    color: white;
+    font-size: 30px;
+    position: relative;
+    left: 2%;
+    letter-spacing: 1px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+
+    
+}
+myDialog1 h4{
+    color: white;
+    font-size: 30px;
+    position: relative;
+    left: 2%;
+    letter-spacing: 1px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+
+    
+}
+menu{
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 10px;
+}
+dialog::backdrop{
+    background-image: url('bg.png');;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#closeDialog1{
+    background-color: black;
+    color: white;
+    font-size: large;
+}
+
+.cross{
+    position: absolute;
+    top: 2%;
+    right: 1%;
+    font-size: larger;
+    border: none;
+}
+
+h1 {
+    position: relative;
+    top: 20px; /* Adjust the value as needed */
+    color: white; /* Sets the font color of the title to white */
+
+}
+
+form {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+label, select, input {
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Honeycomb Loading Indicator */
+@-webkit-keyframes honeycomb {
+  0%, 20%, 80%, 100% {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  30%, 70% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes honeycomb {
+  0%, 20%, 80%, 100% {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  30%, 70% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+.honeycomb {
+  height: 18px; /* Smaller size */
+  position: relative;
+  width: 18px; /* Smaller size */
+  margin: 50px auto 0 auto; /* Center horizontally and move down slightly */
+}
+
+.honeycomb div {
+  -webkit-animation: honeycomb 2.1s infinite backwards;
+  animation: honeycomb 2.1s infinite backwards;
+  background: #f3f3f3;
+  height: 9px; /* Adjust size */
+  margin-top: 4.5px; /* Adjust margin */
+  position: absolute;
+  width: 18px; /* Adjust size */
+}
+
+.honeycomb div:after, .honeycomb div:before {
+  content: '';
+  border-left: 9px solid transparent; /* Adjust size */
+  border-right: 9px solid transparent; /* Adjust size */
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.honeycomb div:after {
+  top: -4.5px; /* Adjust position */
+  border-bottom: 4.5px solid #f3f3f3; /* Adjust size */
+}
+
+.honeycomb div:before {
+  bottom: -4.5px; /* Adjust position */
+  border-top: 4.5px solid #f3f3f3; /* Adjust size */
+}
+
+.honeycomb div:nth-child(1) {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+  left: -21px; /* Adjust position */
+  top: 0;
+}
+
+.honeycomb div:nth-child(2) {
+  -webkit-animation-delay: 0.1s;
+  animation-delay: 0.1s;
+  left: -10.5px; /* Adjust position */
+  top: 16.5px; /* Adjust position */
+}
+
+.honeycomb div:nth-child(3) {
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+  left: 10.5px; /* Adjust position */
+  top: 16.5px; /* Adjust position */
+}
+
+.honeycomb div:nth-child(4) {
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+  left: 21px; /* Adjust position */
+  top: 0;
+}
+
+.honeycomb div:nth-child(5) {
+  -webkit-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+  left: 10.5px; /* Adjust position */
+  top: -16.5px; /* Adjust position */
+}
+
+.honeycomb div:nth-child(6) {
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+  left: -10.5px; /* Adjust position */
+  top: -16.5px; /* Adjust position */
+}
+
+.honeycomb div:nth-child(7) {
+  -webkit-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+  left: 0;
+  top: 0;
+}
+
+#headline-result {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#know-more-form {
+    margin-top: 20px;
+}
+
+.news-buttons {
+    margin-top: 50vh; /* Positions buttons at 75% of the page height */
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.news-buttons button {
+    position: relative;
+    top: -40px; /* Adjust this value to move the buttons upwards */
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+.chatbot-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#urlCheckContainer {
+    display: none;
+    position: fixed;
+    bottom: 70px;
+    left: 20px;
+    background-color: #fff;
+    color: #000;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#urlCheckContainer input[type="text"] {
+    width: 200px;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+}
+
+#urlCheckContainer button {
+    padding: 8px 16px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#urlCheckContainer button:hover {
+    background-color: #007BFF;
+}
+
+#urlCheckResult {
+    margin-top: 10px;
+}
+
+#showUrlCheckButton {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+#showUrlCheckButton:hover {
+    background-color: #007BFF;
+}
+
+

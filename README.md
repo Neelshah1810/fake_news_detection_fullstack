@@ -11,6 +11,10 @@ This program assesses the authenticity of news headlines, determining whether th
 * Beyond just detecting fake news, our system offers additional features to enhance the user experience and provide more value. If the news is determined to be real, users can access more related stories to gain a deeper understanding of the topic. The platform also provides a list of the top 10 news stories of the day, ensuring users stay informed on the most important current events. Additionally, we have integrated a chatbot feature to interact with users, answer questions, and provide summaries of the news. These features create a comprehensive and user-friendly platform designed not only to detect fake news but also to enrich the overall news consumption experience.
 
 ### Getting Started
+* preview:
+  ![image](https://github.com/user-attachments/assets/3bee9242-2288-48bf-86ee-de147db1f357)
+
+
 
 ### Dependencies
 * Python 3.x - Ensure you have Python 3 installed.
@@ -21,6 +25,9 @@ This program assesses the authenticity of news headlines, determining whether th
 * requests - for HTTP requests.
 * beautifulsoup4 - for web scraping.
 * OS Version: Compatible with Windows, macOS, and Linux.
+
+### Download Dataset for DL mpdel:
+https://drive.google.com/file/d/1AdPvtOuQ4yShzVsGlEJVrPMMH9iRS4tX/view?usp=sharing
 ### Installing
 To get started with the Fake News Detection project, follow these steps:
 

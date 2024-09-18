@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <style>
+        body {
+        
+        
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            text-align: center;
+            background-color: #003366; /* Dark blue background */
+            color: #ffffff; /* White text color */
+            padding: 10px 20px; /* Padding around the text */
+            border-radius: 5px; /* Rounded corners */
+        }
+        .news-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .news-item {
+            background-color: white;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            width: 80%;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .news-item h2 {
+            margin: 0 0 10px 0;
+        }
+        .news-item p {
+            margin: 0;
+        }
+        .news-item a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        .news-item a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>{{ title }}</h1>
+    <div class="news-container">
+        {% for item in news %}
+        <div class="news-item">
+            <h2>{{ item.title }}</h2>
+            <p><strong>Source:</strong> {{ item.source }}</p>
+            <p><strong>Published At:</strong> {{ item.publishedAt }}</p>
+            <a href="{{ item.url }}" target="_blank">Read more</a>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

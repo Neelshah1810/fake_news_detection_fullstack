@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake News Detection</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    </head>
+<body>
+        
+    <!-- Logo Image -->
+    <div class="logo-container">
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo" class="logo">
+    </div>
+    
+    <div style="text-align: center;">
+        <h1>Fake News Detection</h1>
+
+    <div class = "strip"></div>
+    <button class="a1"><img src="{{ url_for('static', filename='home.png') }}" class="icons1"> HOME<a href="" ></a></button>
+    
+    <button class="a2"><img src="{{ url_for('static', filename='info.png') }}" > ABOUT<a href="" ></a></button>
+    <dialog id="myDialog">
+        <form method="dialog">
+            <h2>FAKE NEWS DETECTION</h2>
+          <p>
+            
+          * Fake news detection is the process of identifying and filtering out false or misleading information from legitimate news content. In today's digital age, where information spreads rapidly across social media and online platforms, the ability to discern truth from deception has become increasingly crucial. The prevalence of fake news can lead to misinformation, manipulate public opinion, and even incite social unrest. As such, detecting and combating fake news is vital for maintaining the integrity of information and fostering a well-informed society.
+          </p>
+          <p>
+          * To achieve accurate fake news detection, we leverage advanced machine learning (ML) and deep learning techniques, combined with natural language processing (NLP) and sophisticated models like GPT-4. These technologies work together to analyze the text, context, and patterns in news content, enabling the system to distinguish between authentic and fabricated stories. By training models on large datasets of real and fake news, we can create a robust detection system that continuously improves its accuracy. Artificial intelligence and machine learning (AIML) play a crucial role in this process, offering the computational power and intelligence needed to tackle the complexity of modern fake news.
+          </p>
+          <p>
+          *  Beyond just detecting fake news, our system offers additional features to enhance the user experience and provide more value. If the news is determined to be real, users can access more related stories to gain a deeper understanding of the topic. The platform also provides a list of the top 10 news stories of the day, ensuring users stay informed on the most important current events. Additionally, we have integrated a chatbot feature to interact with users, answer questions, and provide summaries of the news. These features create a comprehensive and user-friendly platform designed not only to detect fake news but also to enrich the overall news consumption experience.
+          </p>
+               <menu>
+                <button class="cross">X</button>
+                <button id="closeDialog">Close</button> 
+               </menu> 
+        </form>
+    </dialog>
+    
+    <button class="a3"><img src="{{ url_for('static', filename='phone-telephone.png') }}" alt=""> CONTACT<a href="" ></a></button>
+    <dialog id="myDialog1">
+        <form method="dialog1">
+            <h3>CONTACT US</h3>
+            <p>If you have any questions or inquiries, feel free to reach out to us!</p>
+            <p>
+            Team : CyberCrafters
+            </p>
+            <p>
+            1: Shah Neel Atulkumar : neelshah18102004@gmail.com
+            </p>
+            <p>
+            2: Vasita Jinal Nareshbhai : jinal.n.vasita@gmail.com
+            </p>
+            <p>
+            3: Patel Yashvi Shaileshkumar : patelyashvi1311@gmail.com
+            </p>
+            <p>
+            4: Patel Mahi Mukeshbhai : mahi2406.patel@gmail.com
+            </p>
+            <p>
+            5: Bhatt Stavan Amit : sta1bhatt@gmail.com
+            </p>
+            
+               <menu>
+                <button class="cross">X</button>
+                <button id="closeDialog1">Close</button> 
+               </menu> 
+        </form>
+    </dialog>
+    
+    
+    
+        <!-- Headline Detection -->
+        <form id="headline-form">
+            <label for="headline">Enter news to detect:</label>
+            <input type="text" id="headline" name="headline" required>
+            <select id="method" name="method" required>
+                <option value="g4f">GPT-4o (G4F)</option>
+                <option value="dl">Deep Learning</option>
+            </select>
+            <button type="submit">Detect</button>
+        </form>
+        <div id="detection-info">
+            <p>Use 'GPT Model' to detect news authenticity and 'Deep Learning' to detect AI-generated news.</p>
+        </div>
+        <!-- Display the entered headline -->
+    <p id="entered-headline" style="font-weight: bold;"></p>
+
+        <div id="headline-result"></div>
+        
+        <!-- Loading Indicator (hidden by default) -->
+
+<div id="loading-indicator" class="honeycomb" style="display: none;">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+        
+        
+        <!-- Know More Button (initially hidden) -->
+        <form id="know-more-form" action="/search_news" method="post" style="display: none;">
+            <input type="hidden" id="query" name="query">
+            <button type="submit">Know More</button>
+        </form>
+        
+        <!-- Top News Buttons -->
+        <div class="news-buttons">
+            <button onclick="window.open('/global_news', '_blank')">Get Global News</button>
+            <button onclick="window.open('/india_news', '_blank')">Get India News</button>
+        </div>
+    </div>
+
+    <!-- Chatbot Button -->
+    <button class="chatbot-button" onclick="window.open('/chat', '_blank')">
+        💬
+    </button>
+    
+   <button id="showUrlCheckButton">Check URL</button>
+
+    <div id="urlCheckContainer">
+        <input type="text" id="urlInput" placeholder="Enter URL to check">
+        <button id="checkUrlButton">Check URL</button>
+        <div id="urlCheckResult"></div>
+    </div>
+
+    <script>
+    
+    <!--a2-->
+    document.addEventListener
+("DOMContentLoaded", function () {
+    let dialog = document.querySelector("#myDialog");
+    let openDialog = document.querySelector(".a2");
+    let closeDialog = document.querySelector("#closeDialog");
+    let speak = document.querySelector(".speakBtn");
+    openDialog.addEventListener("click", function (){
+        dialog.showModal();
+    });
+
+
+
+
+
+    closeDialog.addEventListener("click", function (){
+        dialog.close();
+    });
+});
+
+
+    <!--a3-->
+    document.addEventListener
+("DOMContentLoaded", function () {
+    let dialog = document.querySelector("#myDialog1");
+    let openDialog = document.querySelector(".a3");
+    let closeDialog = document.querySelector("#closeDialog1");
+    openDialog.addEventListener("click", function (){
+        dialog.showModal();
+    });
+    closeDialog.addEventListener("click", function (){
+        dialog.close();
+    });
+});
+
+
+        document.getElementById('headline-form').onsubmit = async function(event) {
+    event.preventDefault();
+    
+    // Show the loading indicator
+    document.getElementById('loading-indicator').style.display = 'block';
+    
+    const headline = document.getElementById('headline').value;
+    const method = document.getElementById('method').value;
+    
+     // Display the entered headline above the result
+         document.getElementById('entered-headline').innerText = `You entered: "${headline}"`;
+
+    try {
+        const response = await fetch('/detect_headline', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ headline: headline, method: method })
+        });
+
+        const data = await response.json();
+        document.getElementById('headline-result').innerText = `Result: ${data.result}`;
+        
+        // If the headline is real, show the 'Know More' button and pass the headline as a query.
+        if (data.result === 'Real News') {
+            document.getElementById('know-more-form').style.display = 'block';
+            document.getElementById('query').value = headline;
+        } else {
+            document.getElementById('know-more-form').style.display = 'none';
+        }
+
+        // Clear the input field after showing the result
+        document.getElementById('headline').value = '';
+    } catch (error) {
+        console.error('Error:', error);
+    } finally {
+        // Hide the loading indicator
+        document.getElementById('loading-indicator').style.display = 'none';
+    }
+};
+
+        // Know More Form Submission
+        document.getElementById('know-more-form').onsubmit = function(event) {
+            event.preventDefault();
+            
+            const query = document.getElementById('query').value;
+            
+            // Encode the query to be safely used in a URL
+            const encodedQuery = encodeURIComponent(query);
+            
+            // Construct the Google News search URL
+            const searchUrl = `https://news.google.com/search?q=${encodedQuery}`;
+            
+            // Open the search URL in a new tab
+            window.open(searchUrl, '_blank');
+        };
+        
+        
+    
+        
+        
+        
+
+   document.getElementById("showUrlCheckButton").addEventListener("click", function() {
+            var container = document.getElementById("urlCheckContainer");
+            container.style.display = container.style.display === "none" ? "block" : "none";
+        });
+
+        document.getElementById("checkUrlButton").addEventListener("click", function() {
+            var url = document.getElementById("urlInput").value.trim();
+            if (!url) {
+                alert('Please enter a URL.');
+                return;
+            }
+
+            fetch('/check_url_safety', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ url: url }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById("urlCheckResult").innerText = data.result;
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+        });
+    </script>
+</body>
+</html>
